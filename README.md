@@ -1,6 +1,10 @@
 # DigitalClock
 
-A digital clock in SystemVerilog.
+![](demo/led.jpg)
+
+![](demo/wave.png)
+
+A digital clock in SystemVerilog on FPGA.
 
 The numbers are displayed on a 6-digit digitron.
 
