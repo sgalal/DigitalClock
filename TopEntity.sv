@@ -1,3 +1,9 @@
+/// @param clk100khz System clock 100 kHz
+/// @param mode_set_o Raw Mode Set Button signal
+/// @param inc_o Raw Increase Button signal
+/// @param dec_o Raw Decrease Button signal
+/// @param scan The digitron to scan. Encoded in one hot
+/// @param dout Scan data of digitron
 module TopEntity
 (
 	input clk100khz,

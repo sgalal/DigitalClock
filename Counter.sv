@@ -1,3 +1,15 @@
+/// @param clk100khz System clock 100 kHz
+/// @param mode_set Mode Set Button
+/// @param inc Increase Button 
+/// @param dec Decrease Button
+/// @param msb_h The value of msb of hour
+/// @param lsb_h The value of lsb of hour
+/// @param msb_m The value of msb of minute
+/// @param lsb_m The value of lsb of minute
+/// @param msb_s The value of msb of second
+/// @param lsb_s The value of lsb of second
+/// @param mode_flag Current mode. Including 4 states, normal mode,
+/// setting second, setting minute, setting hour.
 module CounterGrp
 (
 	input clk100khz,
@@ -45,6 +57,12 @@ module CounterGrp
 
 endmodule: CounterGrp
 
+/// @param clk100khz System clock 100 kHz
+/// @param inc Increase signal
+/// @param dec Decrease signal
+/// @param msb Value of msb
+/// @param lsb Value of lsb
+/// @param c Carry signal
 module Counter
 	#(parameter int max_num)
 (
@@ -56,8 +74,8 @@ module Counter
 	output reg c
 );
 
-	parameter [3: 0] max_msb = 4'(max_num / 10);
-	parameter [3: 0] max_lsb = 4'(max_num % 10);
+	localparam [3: 0] max_msb = 4'(max_num / 10);
+	localparam [3: 0] max_lsb = 4'(max_num % 10);
 
 	initial
 	begin

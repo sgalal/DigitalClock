@@ -1,3 +1,10 @@
+/// @param clk100khz System clock 100 kHz
+/// @param mode_set_o Raw Mode Set Button signal
+/// @param inc_o Raw Increase Button signal
+/// @param dec_o Raw Decrease Button signal
+/// @param mode_set Mode Set Button
+/// @param inc Increase Button
+/// @param dec Decrease Button
 module KeyFilter
 (
 	input clk100khz,
